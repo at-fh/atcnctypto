@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码学评估考试系统</title>
+    <meta name="description" content="专业的密码学知识评估和考试平台">
+</head>
+<body>
+    <div id="app">
+        <h1>密码学评估考试系统</h1>
+        <p>系统正在加载中...</p>
+    </div>
+    
+    <script>
+        // 这个文件主要用于Cloudflare Pages识别静态资源
+        // 实际的应用逻辑由 functions/_middleware.js 处理
+        console.log('密码学评估考试系统 - Cloudflare Pages版本');
+        
+        // 如果JavaScript被禁用，显示提示信息
+        document.getElementById('app').innerHTML = `
+            <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+                <h1>🔐 密码学评估考试系统</h1>
+                <p>系统正在初始化，请稍候...</p>
+                <div style="margin-top: 20px;">
+                    <a href="/admin" style="margin: 10px; padding: 10px 20px; background: #007cba; color: white; text-decoration: none; border-radius: 5px;">管理员登录</a>
+                    <a href="/exam" style="margin: 10px; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 5px;">开始考试</a>
+                </div>
+            </div>
+        `;
+    </script>
+</body>
+</html>

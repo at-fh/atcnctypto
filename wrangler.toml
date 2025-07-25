@@ -1,0 +1,38 @@
+name = "atcnctypto"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "atcnCtypto"
+
+[env.preview]
+name = "atcnCtypto-preview"
+
+# Pages configuration
+pages_build_output_dir = "./"
+
+# Environment variables (will be set in Cloudflare dashboard)
+[vars]
+ENVIRONMENT = "production"
+
+# KV Namespaces for caching and data storage
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = "74f1d14ddd4c4537919549784d07102d"
+preview_id = "your-preview-cache-kv-namespace-id"
+
+[[kv_namespaces]]
+binding = "DATA_KV"
+id = "f0f0d6292a874f70ad8a9e13b0ff2ab3"
+preview_id = "your-preview-data-kv-namespace-id"
+
+# Routes configuration
+[build]
+command = ""
+cwd = "./"
+watch_dir = "./"
+
+# Custom domains (optional - configure in Cloudflare dashboard)
+# [env.production.route]
+# pattern = "your-domain.com/*"
+# zone_name = "your-domain.com"
